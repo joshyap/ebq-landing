@@ -17,9 +17,9 @@ function displayModal() {
     modal.style.display = "block";
 }
 
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     setTimeout(displayModal, 1000)
-// });
+document.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(displayModal, 1000)
+});
 
 
 
