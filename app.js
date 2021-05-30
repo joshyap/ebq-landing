@@ -18,7 +18,7 @@ function displayModal() {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(displayModal, 1000);
+    setTimeout(displayModal, 5000);
     console.log('event listened added');
 });
 
