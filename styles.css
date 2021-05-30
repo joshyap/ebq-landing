@@ -1,0 +1,294 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/* END RESET */
+
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    max-height: 40vh;
+    max-width: 40vw;
+}
+
+.landing {
+    background-color: #EBF4FF;
+}
+
+.landing__header {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw; 
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+.landing__text {
+    width: 70vw;
+    font-size: 2.5em;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.landing__text__paragraph {
+    margin-top: 5vh;
+    font-weight: 400;
+}
+
+header, section {
+    width: 100vw;
+    height: 100vh;
+}
+
+button {
+    border-radius: 36px;
+    background-color: #2979EC;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+}
+
+
+.semibold {
+    font-weight: 600;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+/* middle section */
+
+.section__middle {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    font-size: 1.5em;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    align-items: center;
+    justify-items: center;
+}
+
+.section__middle div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section__middle h3, h4 {
+    width: 80%;
+}
+
+.section__middle h4 {
+    margin-top: 3vh;
+    font-weight: 400;
+}
+
+/* footer section */
+
+
+footer {
+    background-color: #0A459E;
+    color: white;
+    height: 40vh;
+    width: 100vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer h1 {
+    font-size: 2.5em;
+}
+
+footer button {
+    opacity: 1;
+    border: 3px solid #FFFFFF;
+    margin: 3vh;
+    background-color: #0A459E;
+}
+
+
+/* modal */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 15px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+    padding: 1em;
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* media queries */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+        
+    .section__middle {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        /* grid-template-rows: 50% 50%; */
+        font-size: .75em;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .section__middle div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section__middle h3, h4 {
+        width: 80%;
+    }
+    
+    .section__middle h4 {
+        margin-top: 3vh;
+        font-weight: 400;
+    }
+
+    .section__middle__q3 {
+        grid-row-start: 4;
+    }
+
+    .section__middle__q4 {
+        grid-row-start: 3;
+    }
+
+    img {
+        max-height: 30vh;
+        max-width: 30vw;
+    }
+
+    footer {
+        margin-top: 5vh;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    
+    .section__middle {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        /* grid-template-rows: 50% 50%; */
+        font-size: 1.25em;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .section__middle div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section__middle h3, h4 {
+        width: 80%;
+    }
+    
+    .section__middle h4 {
+        margin-top: 3vh;
+        font-weight: 400;
+    }
+
+    .section__middle_-q3 {
+        grid-row-start: 4;
+    }
+
+    .section__middle__q4 {
+        grid-row-start: 3;
+    }
+
+    img {
+        max-height: 30vh;
+        max-width: 30vw;
+    }
+
+    footer {
+        margin-top: 5vh;
+    }
+}
